@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LGAVIDIAEXA.Views.Login"
+             Title="Login">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+            <Image Source="logouisrael.jpg" HeightRequest="120" HorizontalOptions="Center" />
+
+            <Label Text="LOGIN"
+                   TextColor="Red" FontSize="20"
+                   HorizontalTextAlignment="Center" FontAttributes="Bold" />
+
+            <!-- GRID 2x2 -->
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="8" RowSpacing="8">
+                <Label Grid.Row="0" Grid.Column="0" Text="Usuario:" />
+                <Entry Grid.Row="0" Grid.Column="1" x:Name="UserBox" Placeholder="usuario" />
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Contraseña:" />
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="PassBox" Placeholder="contraseña" IsPassword="True" />
+            </Grid>
+
+            <!-- Matriz 2x2 -->
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" BackgroundColor="#f3f3f3"
+                  Padding="10" ColumnSpacing="8" RowSpacing="6">
+                <Label Grid.Row="0" Grid.Column="0" Text="estudiante"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="moviles"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="uisrael"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="2025"/>
+            </Grid>
+
+            <Button Text="Iniciar sesión" Clicked="OnLoginClicked"/>
+            <!-- 👉 Nuevo botón para ir directo a Registro -->
+            <Button Text="Registro" Clicked="Button_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+

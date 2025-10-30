@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LGAVIDIAEXA.Views.Registro"
+             Title="Registro">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+
+            <!-- Muestra el texto "Usuario conectado: ..." que llega por el vector -->
+            <Label x:Name="UsuarioConectadoLbl" FontAttributes="Bold" />
+
+            <!-- Título con estilo (opcional, si tienes un estilo global) -->
+            <Label Text="REGISTRO"
+             TextColor="Red" FontSize="20"
+             HorizontalTextAlignment="Center" FontAttributes="Bold" />
+
+            <!-- Grid: 5 filas x 2 columnas -->
+            <Grid ColumnDefinitions="*,*"
+            RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+            ColumnSpacing="12" RowSpacing="8">
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Fecha"/>
+                <DatePicker Grid.Row="0" Grid.Column="1" x:Name="FechaPick"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="País"/>
+                <Picker Grid.Row="1" Grid.Column="1" x:Name="PaisPick">
+                    <Picker.Items>
+                        <x:String>Ecuador</x:String>
+                        <x:String>Colombia</x:String>
+                        <x:String>Perú</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Ciudad"/>
+                <Picker Grid.Row="2" Grid.Column="1" x:Name="CiudadPick">
+                    <Picker.Items>
+                        <x:String>Quito</x:String>
+                        <x:String>Guayaquil</x:String>
+                        <x:String>Cuenca</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Monto Inicial"/>
+                <Entry Grid.Row="3" Grid.Column="1" x:Name="InicialEntry"
+               Keyboard="Numeric" Placeholder="0.00"/>
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Pago mensual"/>
+                <Entry Grid.Row="4" Grid.Column="1" x:Name="PagoMensualEntryRO"
+               IsReadOnly="True" Placeholder="0.00"/>
+            </Grid>
+
+            <!-- Grid: 2 filas x 3 columnas -->
+            <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto"
+            ColumnSpacing="12" RowSpacing="8">
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Apellido"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Edad"/>
+                <Entry Grid.Row="1" Grid.Column="0" x:Name="NombreEntryBox" Placeholder="Ingresar Nombre"/>
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="ApellidoEntryBox" Placeholder="Ingresar Apellido"/>
+                <Entry Grid.Row="1" Grid.Column="2" x:Name="EdadEntryBox" Placeholder="Ingresar Edad" Keyboard="Numeric"/>
+            </Grid>
+
+            <!-- ✅ Botón que llama a tu handler -->
+            <Button Text="Ver Resumen" Clicked="OnVerResumenClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+

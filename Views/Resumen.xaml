@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LGAVIDIAEXA.Views.Resumen"
+             Title="Resumen">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+            <!-- Usuario conectado -->
+            <Label x:Name="UsuarioLbl" FontAttributes="Bold" />
+
+            <!-- Título -->
+            <Label Text="RESUMEN"
+                   TextColor="Red"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"/>
+
+            <!-- Grid 9x2 -->
+            <Grid ColumnDefinitions="*,*"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                  ColumnSpacing="12" RowSpacing="8">
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre"/>
+                <Label Grid.Row="0" Grid.Column="1" x:Name="NombreVal"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Apellido"/>
+                <Label Grid.Row="1" Grid.Column="1" x:Name="ApellidoVal"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Edad"/>
+                <Label Grid.Row="2" Grid.Column="1" x:Name="EdadVal"/>
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Fecha"/>
+                <Label Grid.Row="3" Grid.Column="1" x:Name="FechaVal"/>
+
+                <Label Grid.Row="4" Grid.Column="0" Text="País"/>
+                <Label Grid.Row="4" Grid.Column="1" x:Name="PaisVal"/>
+
+                <Label Grid.Row="5" Grid.Column="0" Text="Ciudad"/>
+                <Label Grid.Row="5" Grid.Column="1" x:Name="CiudadVal"/>
+
+                <Label Grid.Row="6" Grid.Column="0" Text="Monto Inicial"/>
+                <Label Grid.Row="6" Grid.Column="1" x:Name="MontoInicialVal"/>
+
+                <Label Grid.Row="7" Grid.Column="0" Text="Pago mensual"/>
+                <Label Grid.Row="7" Grid.Column="1" x:Name="PagoMensualVal"/>
+
+                <Label Grid.Row="8" Grid.Column="0" Text="Pago Total"/>
+                <Label Grid.Row="8" Grid.Column="1" x:Name="PagoTotalVal"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
