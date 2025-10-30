@@ -30,7 +30,7 @@
             </Grid>
 
             <Button Text="Iniciar sesión" Clicked="OnLoginClicked"/>
-            <!-- 👉 Nuevo botón para ir directo a Registro -->
+            <!-- botón para ir directo a Registro -->
             <Button Text="Registro" Clicked="Button_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
